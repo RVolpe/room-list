@@ -1,0 +1,27 @@
+
+<h3>Update Room</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome da Sala</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="room.nome" name="nome">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Data</label>
+      <input type="text" class="form-control" id="date" required [(ngModel)]="room.data" name="data">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Hora Inicial</label>
+      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.horaInicio" name="horaInicio">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Hora Final</label>
+      <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.horaFim" name="horaFim">
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>

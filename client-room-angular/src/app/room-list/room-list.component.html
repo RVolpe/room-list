@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Room List</h2>
+    </div>
+
+'    <div class="panel-body">'
+      <table class="table ta'ble-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data</th>
+            <th>Hora Inicial</th>
+            <th>Hora Final</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let room of rooms | async">
+            <td>{{room.nome}}</td>
+            <td>{{room.data}}</td>
+            <td>{{room.horaInicio}}</td>
+            <td>{{room.horaFim}}</td>
+
+            <td>
+              <button (click)="roomDetails(room.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+              <button (click)="updateRoom(room.id)" class="btn btn-info" style="margin-left: 10px">Alterar</button>
+              <button (click)="deleteRoom(room.id)" class="btn btn-danger">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
